@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+
+    <!-- BOOTSTRAP LIB -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="bg-second">
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-header bg-main text-white">
+                <h1 class="text-center">CV GENERATOR</h1>
+            </div>
+            <div class="card-body">
+                <div id="content" class="">
+                    <div class="row mb-3">
+                        <div id="warningMessage"></div>
+                        <div class="col">
+                            <label for="inputName" class="form-label">Name: </label>
+                            <input type="text" id="inputName" class="form-control" placeholder="Name" value="Luis Coronado">
+                        </div>
+                        <div class="col">
+                            <label for="inputMail" class="form-label">Mail: </label>
+                            <input type="text" id="inputMail" class="form-control" placeholder="Mail" value="LuisCoronado@mail.com">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="inputAddress" class="form-label">Address: </label>
+                            <input type="text" placeholder="Addess" id="inputAddress" class="form-control" value="1378 Kidd Avenue, Anchorage, Alaska" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="inputSummary" class="form-label">Summary: </label>
+                            <textarea name="" id="inputSummary" cols="30" rows="4" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam exercitationem fugiat. Maiores ipsa vel sapiente eum ipsum deleniti, accusantium, quae earum iusto quos et alias culpa tenetur unde soluta.</textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="inputPhone" class="form-label">Phone: </label>
+                            <input type="text" id="inputPhone" class="form-control" placeholder="Phone" value="+1 896-586-5856">
+                        </div>
+                        <div class="col-md-8">
+                            <label for="inputWebsite" class="form-label">Website: </label>
+                            <input type="text" id="inputWebsite" class="form-control" placeholder="Website" value="www.bestsite.com">
+                        </div>
+                    </div>
+                    <div class="row mt-5 mb-2">
+                        <p class="text-center"><b>*Remeber to divide all the information with a ',' </b></p>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="inputLanguage" class="form-label">Languages: </label>
+                            <textarea name="" id="inputLanguage" cols="30" rows="5" class="form-control">English, Spanish, Chinese</textarea>
+                        </div>
+                        <div class="col">
+                            <label for="inputSkills" class="form-label">Skills: </label>
+                            <textarea name="" id="inputSkills" cols="30" rows="5" class="form-control">C#, Java, Lidershipness, SCRUM</textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="inputEducation" class="form-label">Education: </label>
+                            <textarea name="" id="inputEducation" cols="30" rows="5" class="form-control">Harvard College (2000-2004)</textarea>
+                        </div>
+                        <div class="col">
+                            <label for="inputWorkExperience" class="form-label">Work Experience: </label>
+                            <textarea name="" id="inputWorkExperience" cols="30" rows="5" class="form-control">Q&A (2010-2011) - Development Work, Browners Brother (2014-2022) - Development Work</textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="inputCertifications" class="form-label">Certifications: </label>
+                            <textarea name="" id="inputCertifications" cols="30" rows="5" class="form-control"> Wordpress Profesional Developer (2015), CCNA Cisco (2022), CompTIA A+ </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-main text-white">
+                <button class="btn btn-outline-primary float-end" id="btnStart">GENERATE</button>
+                <button class="btn btn-outline-warning float-end me-3" id="btnClean">CLEAN</button>
+            </div>
+        </div>
+
+        <div class="card mt-5" id="cvContainer">
+            <!-- <div class="card-body">
+                <div style="padding:50px;" id="CV">
+                    <div class="row">
+                        <div class="col-md-4 bg-primary" style="height: 60px;"></div>
+                        <div class="col-md-8"><button class="btn btn-link float-end">Save to PDF</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mt-5">
+                            <h1 class="text-primary">LUIS CORONADO</h1>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Summary</h4>
+                            <hr class="divider" />
+                            <div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae excepturi fugiat adipisci voluptates accusamus magni porro fugit ea atque magnam? Aliquam obcaecati itaque architecto sapiente sed hic pariatur nobis atque?
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae excepturi fugiat adipisci voluptates accusamus magni porro fugit ea atque magnam? Aliquam obcaecati itaque architecto sapiente sed hic pariatur nobis atque?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Contact</h4>
+                            <hr class="divider" />
+                            <div>
+                                <h5><b>Address:</b></h5>
+                                <p id="addressLabel">Street #090 , Av. Ajsod</p>
+                                <h5><b>Phone:</b></h5>
+                                <p id="phoneLabel">+4 456 789 797</p>
+                                <h5><b>Email:</b></h5>
+                                <p id="mailLabel">maiasdasdl@mail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Skill Highlights</h4>
+                            <hr class="divider" />
+                            <div>
+                                <ul>
+                                    <li>Item 1</li>
+                                    <li>Item 2</li>
+                                    <li>Item 3</li>
+                                    <li>Item 4</li>
+                                    <li>Item 5</li>
+                                    <li>Item 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Languages</h4>
+                            <hr class="divider" />
+                            <div>
+                                <p>Spanish - c2</p>
+                                <p>Chinese - A1</p>
+                                <p>German - A2</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Experience</h4>
+                            <hr class="divider" />
+                            <div>
+                                <ul>
+                                    <li>Place 1</li>
+                                    <li>Place 2</li>
+                                    <li>Place 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Certifications</h4>
+                            <hr class="divider" />
+                            <div>
+                                <p>Certification 1</p>
+                                <p>Certification 1</p>
+                                <p>Certification 1</p>
+                                <p>Certification 1</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Education</h4>
+                            <hr class="divider" />
+                            <div>
+                                <p>Education 1</p>
+                                <p>Education 1</p>
+                                <p>Education 1</p>
+                                <p>Education 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8 bg-primary" style="height: 60px;"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- SCRIPTS  -->
+        <script src="lib/js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
+
+<!-- 
+<div id="content" class="bg-third text-white">
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputName" class="form-label">Name: </label>
+            <input type="text" id="inputName" class="form-control" placeholder="Name">
+        </div>
+        <div class="col">
+            <label for="inputMail" class="form-label">Mail: </label>
+            <input type="text" id="inputMail" class="form-control" placeholder="Mail">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputAddress" class="form-label">Address: </label>
+            <input type="text" placeholder="Addess" id="inputAddress" class="form-control" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputSummary" class="form-label">Summary: </label>
+            <textarea name="" id="inputSummary" cols="30" rows="4" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="inputPhone" class="form-label">Phone: </label>
+            <input type="text" id="inputPhone" class="form-control" placeholder="Phone">
+        </div>
+        <div class="col-md-8">
+            <label for="inputWebsite" class="form-label">Website: </label>
+            <input type="text" id="inputWebsite" class="form-control" placeholder="Website">
+        </div>
+    </div>
+    <div class="row mt-5 mb-2">
+        <p class="text-center"><b>*Remeber to divide all the information with a ',' </b></p>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputLanguage" class="form-label">Languages: </label>
+            <textarea name="" id="inputLanguage" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="col">
+            <label for="inputSkills" class="form-label">Skills: </label>
+            <textarea name="" id="inputSkills" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputEducation" class="form-label">Education: </label>
+            <textarea name="" id="inputEducation" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="col">
+            <label for="inputWorkExperience" class="form-label">Work Experience: </label>
+            <textarea name="" id="inputWorkExperience" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <label for="inputCertifications" class="form-label">Certifications: </label>
+            <textarea name="" id="inputCertifications" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+    </div>
+</div> -->

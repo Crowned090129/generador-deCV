@@ -1,0 +1,22 @@
+.bg-main {
+    background-color: #354259;
+    border: 0;
+}
+
+.bg-second {
+    background-color: #CDC2AE;
+    border: 0;
+}
+
+.bg-third {
+    background-color: #1363DF;
+    border: 0;
+}
+
+.border-success {
+    border-color: green;
+}
+
+.border-wrong {
+    border-color: red;
+}
